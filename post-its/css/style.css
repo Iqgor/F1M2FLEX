@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #190B28;
+    font-family: 'Ceviche One', cursive;
+    font-size: 16px;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.text{ 
+    font-size: 250%;
+    font-weight: 400;
+}
+
+.post-it{
+    width: 400px;
+    height: 400px;
+    background: #ECA400;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 300px, 300px 100%,0% 100%);
+    transition: 2s all;
+   transform-origin: top left;
+   flex-shrink: 0;
+}
+
+
+.post-it:hover{
+    transform: rotate(15deg);
+    transition: 0.5s all;
+}
+
+
+.kleur1{
+    background:#66B83C;
+}
+
+.kleur2{
+    background: #ECA400 ;
+}
+
+.kleur3{
+    background: #E6E8E6;
+}
+.kleur1 > div, .kleur2 > div, .kleur3 > div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.kleur1 > div{
+    background: #509130;
+}
+.kleur2 > div{
+    background: #bd8400;   
+}
+.kleur3 > div{
+    background: #7c7e7c;
+}
+@media screen and (max-width: 1200px) {
+    .post-it:hover{
+        transform: none;
+     
+    }
+}

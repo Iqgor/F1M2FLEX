@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --base-color: #93aabe;
+    --background-color: #b3c3d0;
+    --dark-base-color: #7290aa;
+}
+
+body{
+    background: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sphere3D{
+     
+}
+
+.sphere{
+    width: 400px;
+    height: 400px;
+    border-radius:50%;
+    background: linear-gradient(var(--base-color),50%,var(--dark-base-color));
+}

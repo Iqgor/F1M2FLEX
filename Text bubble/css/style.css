@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #34BE82;
+    --color-circles: black;
+}
+
+body{
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.textbubble{
+    position: relative;
+    animation-name: popup;
+    animation-duration: 0.8s;
+    
+}
+
+input{
+    appearance: none;
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+}
+
+input:checked ~ .bubble .circle{ 
+    animation-name: typing;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+
+label{
+    display: block;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+
+.bubble{
+    width: 270px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    background:var(--color-circles);
+    border-radius: 50%;
+    
+}
+
+.second{
+    animation-delay: 0.5s;
+}
+
+.third{
+    animation-delay: 1s;
+}
+
+.triangle, .triangleBackground{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    
+
+}
+
+.triangle{
+    width: 40px;
+    height: 40px;
+    background: white;
+    top: 96%;
+}
+
+.triangleBackground{
+    width: 50px;
+    height: 50px;
+    background: black;
+    top: 97%;
+    
+
+}
+
+@keyframes popup {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from{
+        opacity: 0;
+        transform: translateY(7px);
+    }
+    50%{
+        transform: translateY(-4px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}   
